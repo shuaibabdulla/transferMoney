@@ -1,0 +1,79 @@
+{
+	"variables": [],
+	"info": {
+		"name": "MoneyTransferAPI",
+		"_postman_id": "6b1d7e33-8342-4afb-2beb-20d4c4d2de27",
+		"description": "MoneyTransferAPI provides account management, and money transfer capabilities.",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Account",
+			"request": {
+				"url": "localhost:7000/account",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\"accountID\" : \"1\",\n\"currency\": 1001,\n\"balance\" : 1000.66\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "DeleteAccount",
+			"request": {
+				"url": "http://localhost:7000/account/1",
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "GetAccount",
+			"request": {
+				"url": "http://localhost:7000/account/2",
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "CreateTransfer",
+			"request": {
+				"url": "localhost:7000/transfer",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"sourceAccountID\" : \"1\",\n\t\"destinationAccountID\" : \"2\",\n\t\"amount\" : 100.88,\n\t\"currency\" : 1001\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
